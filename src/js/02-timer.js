@@ -5,6 +5,7 @@ import Notiflix from 'notiflix';
 const btnEl = document.querySelector('[data-start]');
 btnEl.disabled = 'true';
 let ms = 0;
+let timerId;
 const daysEl = document.querySelector('[data-days]');
 const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
