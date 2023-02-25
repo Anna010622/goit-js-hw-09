@@ -1,0 +1,2 @@
+body{height:100vh;width:100vw;justify-content:center;align-items:center;display:flex}p{position:absolute;top:0;left:20px}button{border-radius:10px;padding:10px 20px;font-size:25px;box-shadow:0 6px 4px rgba(0,0,0,.15)}button:hover:enabled{background-color:rgba(240,240,240,.76)}button:active:enabled{transform:translateY(4px);box-shadow:0 3px 4px rgba(0,0,0,.635)}button[data-start]{margin-right:15px}
+/*# sourceMappingURL=01-color-switcher.4417ddb6.css.map */
