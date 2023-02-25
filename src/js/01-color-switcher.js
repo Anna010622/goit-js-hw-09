@@ -7,6 +7,7 @@ function getRandomHexColor() {
 }
 
 function handleStartBtnClick() {
+  bodyEl.style.backgroundColor = getRandomHexColor();
   timerId = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
   }, 1000);
