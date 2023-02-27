@@ -62,6 +62,7 @@ function updateTimerInterface(
 }
 
 function handleBtnElClick() {
+  btnEl.disabled = 'true';
   updateTimerInterface();
   timerId = setInterval(() => {
     if (ms < 1000) {

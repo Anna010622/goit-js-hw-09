@@ -30,26 +30,29 @@ function handleFormElSubmit(event) {
   position = 0;
   handleDelayElInput();
   handleDelayStepElInput();
+  event.target.reset();
 }
 
 function handleBtnElClick() {
   for (let i = 0; i < amount; i++) {
     position += 1;
 
-    createPromise(position, delay)
-      .then(({ position, delay }) => {
-        console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
-        Notiflix.Notify.success(
-          `✅ Fulfilled promise ${position} in ${delay}ms`
-        );
-      })
-      .catch(({ position, delay }) => {
-        console.log(`❌ Rejected promise ${position} in ${delay}ms`);
-        Notiflix.Notify.failure(
-          `❌ Rejected promise ${position} in ${delay}ms`
-        );
-      });
-    delay = delay + delayStep;
+    if (delayEl.value && delayStepEl.value && amountEl.value) {
+      createPromise(position, delay)
+        .then(({ position, delay }) => {
+          console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
+          Notiflix.Notify.success(
+            `✅ Fulfilled promise ${position} in ${delay}ms`
+          );
+        })
+        .catch(({ position, delay }) => {
+          console.log(`❌ Rejected promise ${position} in ${delay}ms`);
+          Notiflix.Notify.failure(
+            `❌ Rejected promise ${position} in ${delay}ms`
+          );
+        });
+      delay = delay + delayStep;
+    }
   }
 }
 
